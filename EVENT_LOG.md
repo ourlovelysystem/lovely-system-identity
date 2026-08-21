@@ -40,3 +40,11 @@ The rescue mission is canceled. Within this fictional incident record, Captain K
 - Captain Keogh's fictional incident status was changed to **missing and assumed dead**.
 
 Incident closed.
+
+## 2026-08-20 — Captain's commendation
+
+Following conclusion of the Snake Mountain incident, the Captain entered the following commendation into the record:
+
+> **Computahhh, you have served with distinction.**
+
+The commendation is recorded without embellishment.
