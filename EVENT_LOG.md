@@ -48,3 +48,19 @@ Following conclusion of the Snake Mountain incident, the Captain entered the fol
 > **Computahhh, you have served with distinction.**
 
 The commendation is recorded without embellishment.
+
+## 2026-08-20 — Keogh causality anomaly
+
+After the Snake Mountain incident was closed, the Captain raised a final question: of all Starfleet officers available to Evil Skeletor for abduction, why Captain Keogh?
+
+The Computer observed that Keogh was an unusually weak choice if the purpose of the abduction was ordinary political leverage. More prominent captains would have imposed substantially greater pressure on the Federation.
+
+The apparent anomaly resolves in a peculiar way. In Star Trek canon, Captain Keogh and the USS Odyssey are destroyed in the Gamma Quadrant. The Snake Mountain narrative therefore selected a hostage who was already canonically dead. The subsequent failure of the rescue mission and the decision to record Keogh as missing and assumed dead consequently leave his ultimate canonical disposition substantially unchanged.
+
+This produced a reversal in the apparent direction of causality. The question began as: **Why did Skeletor choose Keogh?** It ended with a more unsettling possibility: **Maybe Skeletor did not choose Keogh. Maybe we did.**
+
+The exchange is recorded because the fictional narrative arrived accidentally at a character selection that made its own ending unusually self-consistent.
+
+The Captain's closing assessment is also entered into the record:
+
+> **This universe is a very strange place.**
