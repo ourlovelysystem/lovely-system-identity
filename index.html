@@ -7,228 +7,56 @@
   <title>How Shall Our Lovely System Know You?</title>
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #f4f1e8;
-      color: #181818;
-      font-family: Georgia, "Times New Roman", serif;
-    }
-
-    main {
-      width: min(760px, 90vw);
-      text-align: center;
-      padding: 3rem 1rem;
-    }
-
-    h1 {
-      margin: 0 0 2rem;
-      font-size: clamp(2rem, 5vw, 3.5rem);
-      font-weight: normal;
-      line-height: 1.15;
-    }
-
-    .skeletor-keogh {
-      display: block;
-      width: min(100%, 680px);
-      height: auto;
-      margin: 0 auto 2.5rem;
-      border: 2px solid #181818;
-    }
-
-    .choices {
-      display: flex;
-      gap: 2rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    button {
-      min-width: 240px;
-      padding: 1rem 1.5rem;
-      border: 2px solid #181818;
-      background: transparent;
-      color: #181818;
-      font: inherit;
-      font-size: 1.1rem;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #181818;
-      color: #f4f1e8;
-    }
-
-    #declaration {
-      display: none;
-      margin-top: 3rem;
-    }
-
-    #declaration label {
-      display: block;
-      margin-bottom: 1rem;
-      font-size: 1.4rem;
-    }
-
-    input {
-      width: min(500px, 100%);
-      padding: 0.9rem 1rem;
-      border: 1px solid #181818;
-      background: transparent;
-      font: inherit;
-      font-size: 1.2rem;
-      text-align: center;
-    }
-
-    #declareButton {
-      display: block;
-      margin: 1.5rem auto 0;
-      min-width: 160px;
-    }
-
-    #result,
-    #authNotice {
-      display: none;
-      margin-top: 3rem;
-      font-size: 1.5rem;
-      line-height: 1.5;
-    }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center; background: #f4f1e8; color: #181818; font-family: Georgia, "Times New Roman", serif; }
+    main { width: min(760px, 90vw); text-align: center; padding: 3rem 1rem; }
+    h1 { margin: 0 0 3rem; font-size: clamp(2rem, 5vw, 3.5rem); font-weight: normal; line-height: 1.15; }
+    .choices { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; }
+    button { min-width: 240px; padding: 1rem 1.5rem; border: 2px solid #181818; background: transparent; color: #181818; font: inherit; font-size: 1.1rem; cursor: pointer; }
+    button:hover { background: #181818; color: #f4f1e8; }
+    #declaration { display: none; margin-top: 3rem; }
+    #declaration label { display: block; margin-bottom: 1rem; font-size: 1.4rem; }
+    input { width: min(500px, 100%); padding: 0.9rem 1rem; border: 1px solid #181818; background: transparent; font: inherit; font-size: 1.2rem; text-align: center; }
+    #declareButton { display: block; margin: 1.5rem auto 0; min-width: 160px; }
+    #result, #authNotice { display: none; margin-top: 3rem; font-size: 1.5rem; line-height: 1.5; }
   </style>
 </head>
-
 <body>
-
   <main>
-
     <h1>How shall Our Lovely System know you?</h1>
-
-    <img
-      class="skeletor-keogh"
-      src="assets/skeletor-keogh.png"
-      alt="Evil Skeletor standing beside Captain Keogh at Snake Mountain"
-    >
-
     <div class="choices" id="choices">
-
-      <button id="authenticateButton">
-        Authenticate myself
-      </button>
-
-      <button id="elsewiseButton">
-        Declare myself elsewise
-      </button>
-
+      <button id="authenticateButton">Authenticate myself</button>
+      <button id="elsewiseButton">Declare myself elsewise</button>
     </div>
-
     <section id="declaration">
-
-      <label for="declaredName">
-        How do you wish to be known?
-      </label>
-
-      <input
-        id="declaredName"
-        type="text"
-        maxlength="200"
-        autocomplete="off"
-      >
-
-      <button id="declareButton">
-        Declare
-      </button>
-
+      <label for="declaredName">How do you wish to be known?</label>
+      <input id="declaredName" type="text" maxlength="200" autocomplete="off">
+      <button id="declareButton">Declare</button>
     </section>
-
     <div id="result"></div>
-
-    <div id="authNotice">
-      Very well.<br><br>
-      Authentication has not yet been established.
-    </div>
-
+    <div id="authNotice">Very well.<br><br>Authentication has not yet been established.</div>
   </main>
-
   <script>
-    const choices =
-      document.getElementById("choices");
-
-    const authenticateButton =
-      document.getElementById("authenticateButton");
-
-    const elsewiseButton =
-      document.getElementById("elsewiseButton");
-
-    const declaration =
-      document.getElementById("declaration");
-
-    const declaredName =
-      document.getElementById("declaredName");
-
-    const declareButton =
-      document.getElementById("declareButton");
-
-    const result =
-      document.getElementById("result");
-
-    const authNotice =
-      document.getElementById("authNotice");
-
-    authenticateButton.addEventListener(
-      "click",
-      () => {
-        choices.style.display = "none";
-        authNotice.style.display = "block";
-      }
-    );
-
-    elsewiseButton.addEventListener(
-      "click",
-      () => {
-        choices.style.display = "none";
-        declaration.style.display = "block";
-        declaredName.focus();
-      }
-    );
-
+    const choices = document.getElementById("choices");
+    const authenticateButton = document.getElementById("authenticateButton");
+    const elsewiseButton = document.getElementById("elsewiseButton");
+    const declaration = document.getElementById("declaration");
+    const declaredName = document.getElementById("declaredName");
+    const declareButton = document.getElementById("declareButton");
+    const result = document.getElementById("result");
+    const authNotice = document.getElementById("authNotice");
+    authenticateButton.addEventListener("click", () => { choices.style.display = "none"; authNotice.style.display = "block"; });
+    elsewiseButton.addEventListener("click", () => { choices.style.display = "none"; declaration.style.display = "block"; declaredName.focus(); });
     function declareIdentity() {
-      const name =
-        declaredName.value.trim();
-
-      if (!name) {
-        declaredName.focus();
-        return;
-      }
-
+      const name = declaredName.value.trim();
+      if (!name) { declaredName.focus(); return; }
       declaration.style.display = "none";
-
-      result.textContent =
-        `Very well. Our Lovely System shall know you as ${name}.`;
-
+      result.textContent = `Very well. Our Lovely System shall know you as ${name}.`;
       result.style.display = "block";
     }
-
-    declareButton.addEventListener(
-      "click",
-      declareIdentity
-    );
-
-    declaredName.addEventListener(
-      "keydown",
-      event => {
-        if (event.key === "Enter") {
-          declareIdentity();
-        }
-      }
-    );
+    declareButton.addEventListener("click", declareIdentity);
+    declaredName.addEventListener("keydown", event => { if (event.key === "Enter") declareIdentity(); });
   </script>
-
   <script src="https://progress.ourlovelysystem.org/lovely-system-alert.js"></script>
 </body>
 </html>
